@@ -1,6 +1,5 @@
-import collections
-from http.client import PAYMENT_REQUIRED
-from itertools import product
+# import collections
+
 from tkinter import CASCADE
 from django.db import models
 
@@ -81,6 +80,6 @@ class Cart(models.Model):
 
 class CartItem(models.Model):
     cart = models.ForeignKey(Cart, on_delete=CASCADE)
-    product =models.ForeignKey(Product, on_delete=CASCADE)
+    product = models.ForeignKey(Product, on_delete=CASCADE)
     quantity = models.PositiveSmallIntegerField()
     
